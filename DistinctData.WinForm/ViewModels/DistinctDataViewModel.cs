@@ -1,4 +1,5 @@
 ﻿using SugiTool.Domain.Entities;
+using SugiTool.Domain.Helper;
 using SugiTool.Domain.Repositories;
 using System;
 using System.Collections.Generic;
@@ -28,6 +29,13 @@ namespace SugiTool.DistinctData.WinForm.ViewModels
 			ChozaihoushukoseiList.AddRange(
 				_chouzaihoushu.Read(InputPath)
 				);
+		}
+
+		public void Save()
+		{
+			ChozaihoushukoseiList.DistinctList();
+			//ファイル保存
+			_chouzaihoushu.Write(OutputPath, ChozaihoushukoseiList);
 		}
 	}
 }

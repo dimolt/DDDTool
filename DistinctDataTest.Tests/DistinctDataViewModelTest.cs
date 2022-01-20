@@ -12,6 +12,7 @@ namespace SugiTool.DistinctDataTest.Tests
 	public class DistinctDataViewModelTest
 	{
 		private readonly string TEST_FILE = @"D:\Sugi\作成tool\SugiTool_DDD\Test\Test.CSV";
+		private readonly string RESULT_FILE = @"D:\Sugi\作成tool\SugiTool_DDD\Test\Result.CSV";
 
 		[TestMethod]
 		public void シナリオ()
@@ -37,6 +38,11 @@ namespace SugiTool.DistinctDataTest.Tests
 			viewModel.InputPath = TEST_FILE;
 			viewModel.Read();
 			viewModel.ChozaihoushukoseiList.Count.Is(2);
+
+			//ファイル保存
+			viewModel.OutputPath = RESULT_FILE;
+			viewModel.Save();
+			viewModel.ChozaihoushukoseiList.Count.Is(0);
 		}
 	}
 }
