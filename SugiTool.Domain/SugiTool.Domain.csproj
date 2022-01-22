@@ -47,5 +47,11 @@
     <Compile Include="Repositories\IChozaihoshukoseiRepository.cs" />
     <Compile Include="ValueObjects\ChozaihoushukoseiData.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ComLib\ComLib.csproj">
+      <Project>{5e306a02-7b5d-4070-84ab-2a726620b74e}</Project>
+      <Name>ComLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

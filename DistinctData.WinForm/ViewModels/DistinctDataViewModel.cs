@@ -1,6 +1,7 @@
 ﻿using SugiTool.Domain.Entities;
 using SugiTool.Domain.Helper;
 using SugiTool.Domain.Repositories;
+using SugiTool.Infrastructure.File;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,10 @@ namespace SugiTool.DistinctData.WinForm.ViewModels
 		{
 			_chouzaihoushu = chouzaihoushu;
 		}
+		public DistinctDataViewModel()
+		{
+			_chouzaihoushu = new ChozaihoushukoseiFile();
+		}
 
 		public string OutputPath { get; set; } = string.Empty;
 		public string InputPath { get; set; } = string.Empty;
@@ -31,11 +36,16 @@ namespace SugiTool.DistinctData.WinForm.ViewModels
 				);
 		}
 
+
 		public void Save()
 		{
-			ChozaihoushukoseiList.DistinctList();
 			//ファイル保存
 			_chouzaihoushu.Write(OutputPath, ChozaihoushukoseiList);
+		}
+
+		public void Distinct()
+		{
+			ChozaihoushukoseiList.DistinctList();
 		}
 	}
 }

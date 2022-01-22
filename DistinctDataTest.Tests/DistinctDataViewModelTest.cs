@@ -21,8 +21,10 @@ namespace SugiTool.DistinctDataTest.Tests
 			chozaihoshuMock.Setup(x => x.Read(TEST_FILE)).Returns(
 				new List<ChozaihoushukoseiEntity>
 				{
-					new ChozaihoushukoseiEntity("")
-					, new ChozaihoushukoseiEntity("")
+					new ChozaihoushukoseiEntity("1,2,3")
+					, new ChozaihoushukoseiEntity("1,2,3,4")
+					, new ChozaihoushukoseiEntity("1,0,1,1,2")
+					, new ChozaihoushukoseiEntity("1,0,2,1,2")
 				}
 			);
 
@@ -37,12 +39,15 @@ namespace SugiTool.DistinctDataTest.Tests
 			//ファイル読込
 			viewModel.InputPath = TEST_FILE;
 			viewModel.Read();
-			viewModel.ChozaihoushukoseiList.Count.Is(2);
+			viewModel.ChozaihoushukoseiList.Count.Is(4);
+
+			//一意にまとめる
+			viewModel.Distinct();
+			viewModel.ChozaihoushukoseiList.Count.Is(3);
 
 			//ファイル保存
 			viewModel.OutputPath = RESULT_FILE;
 			viewModel.Save();
-			viewModel.ChozaihoushukoseiList.Count.Is(0);
 		}
 	}
 }

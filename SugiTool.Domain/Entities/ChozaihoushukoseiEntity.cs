@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 namespace SugiTool.Domain.Entities
 {
 	public sealed class ChozaihoushukoseiEntity
-	{
-		private ChozaihoushukoseiData _data;
+	{ 
+		public ChozaihoushukoseiData Data { get; }
 
 		public ChozaihoushukoseiEntity(string lineTxt)
 		{
-			_data = new ChozaihoushukoseiData(lineTxt);
+			Data = new ChozaihoushukoseiData(lineTxt);
 		}
 	}
 }

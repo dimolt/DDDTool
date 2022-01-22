@@ -29,29 +29,29 @@ namespace SugiTool.DistinctData.WinForm.Views
         /// </summary>
         private void InitializeComponent()
         {
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.textBox2 = new System.Windows.Forms.TextBox();
+			this.srcDirTextBox = new System.Windows.Forms.TextBox();
+			this.dstDirTextBox = new System.Windows.Forms.TextBox();
 			this.button1 = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
-			// textBox1
+			// srcDirTextBox
 			// 
-			this.textBox1.Location = new System.Drawing.Point(12, 37);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(238, 19);
-			this.textBox1.TabIndex = 0;
-			this.textBox1.Text = "D:\\Sugi\\資料\\00.介護報酬改定\\リランデータ\\出力データ\\";
+			this.srcDirTextBox.Location = new System.Drawing.Point(12, 37);
+			this.srcDirTextBox.Name = "srcDirTextBox";
+			this.srcDirTextBox.Size = new System.Drawing.Size(238, 19);
+			this.srcDirTextBox.TabIndex = 0;
+			this.srcDirTextBox.Text = "D:\\Sugi\\資料\\00.介護報酬改定\\リランデータ\\出力データ\\";
 			// 
-			// textBox2
+			// dstDirTextBox
 			// 
-			this.textBox2.Location = new System.Drawing.Point(12, 84);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(238, 19);
-			this.textBox2.TabIndex = 1;
-			this.textBox2.Text = "D:\\Sugi\\資料\\00.介護報酬改定\\リランデータ\\";
+			this.dstDirTextBox.Location = new System.Drawing.Point(12, 84);
+			this.dstDirTextBox.Name = "dstDirTextBox";
+			this.dstDirTextBox.Size = new System.Drawing.Size(238, 19);
+			this.dstDirTextBox.TabIndex = 1;
+			this.dstDirTextBox.Text = "D:\\Sugi\\資料\\00.介護報酬改定\\リランデータ\\";
 			// 
 			// button1
 			// 
@@ -99,8 +99,8 @@ namespace SugiTool.DistinctData.WinForm.Views
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.button1);
-			this.Controls.Add(this.textBox2);
-			this.Controls.Add(this.textBox1);
+			this.Controls.Add(this.dstDirTextBox);
+			this.Controls.Add(this.srcDirTextBox);
 			this.Name = "DistinctDataView";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "重複削除";
@@ -111,8 +111,8 @@ namespace SugiTool.DistinctData.WinForm.Views
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox srcDirTextBox;
+        private System.Windows.Forms.TextBox dstDirTextBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

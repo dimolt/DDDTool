@@ -52,6 +52,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="database\DataRowExtensions.cs" />
+    <Compile Include="DDD\ValueObject.cs" />
+    <Compile Include="DDD\ViewModelBase.cs" />
     <Compile Include="file\CsvReader.cs" />
     <Compile Include="file\FileControl.cs" />
     <Compile Include="file\IniFile.cs" />

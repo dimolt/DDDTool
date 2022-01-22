@@ -41,10 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="File\ChozaihoushukoseiFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="CSV\" />
+    <ProjectReference Include="..\ComLib\ComLib.csproj">
+      <Project>{5e306a02-7b5d-4070-84ab-2a726620b74e}</Project>
+      <Name>ComLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SugiTool.Domain\SugiTool.Domain.csproj">
+      <Project>{dcfebd1a-4fd7-450a-978c-e69c5c95b4d9}</Project>
+      <Name>SugiTool.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

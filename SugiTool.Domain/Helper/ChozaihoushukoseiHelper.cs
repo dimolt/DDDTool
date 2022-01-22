@@ -11,12 +11,16 @@ namespace SugiTool.Domain.Helper
 	{
 		public static void DistinctList(this List<ChozaihoushukoseiEntity> srcList)
 		{
-			var distincted = new List<ChozaihoushukoseiEntity>();
-
-			//
-
+			var tmpList = new List<ChozaihoushukoseiEntity>();
+			tmpList.AddRange(srcList);
 			srcList.Clear();
-			srcList.AddRange(distincted);
+			foreach(var entity in tmpList)
+			{
+				if (!srcList.Any(x => x.Data.Equals(entity.Data)))
+				{
+					srcList.Add(entity);
+				}
+			}
 		}
 	}
 }
